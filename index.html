@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Graph Visualization</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Uninformed search Graph Creater</h1>
+    </header>
+    <main>
+        <div id="graph-container">
+            <canvas id="graphCanvas" width="800" height="600"></canvas>
+        </div>
+        <div id="controls">
+            <h2>Graph Editor</h2>
+            <form id="addEdgeForm">
+                <label for="fromNode">From Node:</label>
+                <input type="text" id="fromNode" required>
+                <label for="toNode">To Node:</label>
+                <input type="text" id="toNode" required>
+                <label for="cost">Cost:</label>
+                <input type="number" id="cost" min="1" required>
+                <button type="submit">Add Edge</button>
+            </form>
+            <button id="startBFSButton">Start BFS</button>
+            <button id="startDFSButton">Start DFS</button>
+            <button id="startUCSButton">Start UCS</button>
+            <button id="resetButton">Reset</button>
+            <button id="resetColorsButton">Reset Colors</button>
+
+        </div>
+        <div id="priority-queue">
+            <h2>Priority Queue</h2>
+            <ul id="queueList"></ul>
+        </div>
+    </main>
+    <footer>
+        <p>Graph Algorithms © 2024</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+
